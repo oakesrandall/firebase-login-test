@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dubow House Project Management</title>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyAP-MzzO6Yzl_tHYAdaVaTtdIPK2YLloxI",
+            authDomain: "dubow-house-project-management.firebaseapp.com",
+            databaseURL: "https://dubow-house-project-management.firebaseio.com",
+            projectId: "dubow-house-project-management",
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css"/>
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'projects.html',
+            signInOptions: [
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ]
+        };
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+</head>
+<body>
+
+
+<h1>Dubow House Project Management</h1>
+
+
+<div id="firebaseui-auth-container"></div>
+
+
+
+</body>
+</html>
+
