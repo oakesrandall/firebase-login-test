@@ -1,0 +1,26 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("images/crowd.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.headline {
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+    padding-top: 40px;
+    color: #092c4f;
+}
+
+#firebaseui-auth-container {
+    padding: 6em 0;
+}
