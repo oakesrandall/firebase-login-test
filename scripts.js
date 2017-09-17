@@ -20,7 +20,7 @@ function saveToList(event) {
         console.log('Task due: ' + taskDue);
         if (taskName.length > 0) {
             console.log('attempting to save to firebase');
-            saveToFb(taskName);
+            saveToFb(taskName, assignedTo, taskInfo, taskDue);
         }
         console.log('Resetting values');
         document.getElementById('taskName').value = '';
@@ -31,7 +31,7 @@ function saveToList(event) {
     }
 };
 
-function saveToFb(taskName) {
+function saveToFb(taskName, assignedTo, taskInfo, taskDue) {
     console.log('running saveToFb');
     tasks.push({
         name: taskName,
