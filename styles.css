@@ -24,3 +24,21 @@ header,
 #firebaseui-auth-container {
     padding: 6em 0;
 }
+
+.projectBody {
+    background: #efefef;
+    padding: 32px;
+    padding-top: 16px;
+    color: #333;
+}
+
+.projectBody h1, h3 {
+    text-align: center;
+    color: #787878;
+}
+
+#tasks {
+    width: 98%;
+    padding: 9px;
+    font-size: 16px;
+}

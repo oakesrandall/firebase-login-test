@@ -5,44 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dubow House Project Management</title>
     <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-    <script>
-        var config = {
-            apiKey: "AIzaSyAP-MzzO6Yzl_tHYAdaVaTtdIPK2YLloxI",
-            authDomain: "dubow-house-project-management.firebaseapp.com",
-            databaseURL: "https://dubow-house-project-management.firebaseio.com",
-            projectId: "dubow-house-project-management"
-        };
-        firebase.initializeApp(config);
-    </script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
-    <script type="text/javascript">
-        var uiConfig = {
-            signInSuccessUrl: 'projects.html',
-            signInOptions: [
-                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                firebase.auth.EmailAuthProvider.PROVIDER_ID
-            ]
-        };
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
+    <!--<script>-->
+        <!--var config = {-->
+            <!--apiKey: "AIzaSyAP-MzzO6Yzl_tHYAdaVaTtdIPK2YLloxI",-->
+            <!--authDomain: "dubow-house-project-management.firebaseapp.com",-->
+            <!--databaseURL: "https://dubow-house-project-management.firebaseio.com",-->
+            <!--projectId: "dubow-house-project-management"-->
+        <!--};-->
+        <!--firebase.initializeApp(config);-->
+    <!--</script>-->
+    <!--<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>-->
+    <!--<script type="text/javascript">-->
+        <!--var uiConfig = {-->
+            <!--signInSuccessUrl: 'projects.html',-->
+            <!--signInOptions: [-->
+                <!--firebase.auth.GoogleAuthProvider.PROVIDER_ID,-->
+                <!--firebase.auth.FacebookAuthProvider.PROVIDER_ID,-->
+                <!--firebase.auth.EmailAuthProvider.PROVIDER_ID-->
+            <!--]-->
+        <!--};-->
+        <!--var ui = new firebaseui.auth.AuthUI(firebase.auth());-->
+        <!--ui.start('#firebaseui-auth-container', uiConfig);-->
+    <!--</script>-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css"/>-->
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div  id="intro" class="view">
+<div  id="intro" class="view container">
 
     <div class="full-bg-img">
-        <div>
+        <div class="projectBody">
             <h1 class="headline">Dubow House Project Management</h1>
-            <div class="project-container">
-                <input type="text" id="projectName">
-            </div>
-        </div>
+            <h3>Keep track of your projects</h3>
+            <hr />
+                <input type="text" id="taskName" placeholder="Enter task name" onkeypress="return saveToList(event)">
+                <input type="text" id="assignedTo" placeholder="Task assigned to" onkeypress="return saveToList(event)">
+                <input type="text" id="taskInfo" placeholder="Enter task info" onkeypress="return saveToList(event)">
+                <input type="text" id="taskDue" placeholder="Task due date" onkeypress="return saveToList(event)">
+                <h4>Tasks</h4>
+                <ul id="tasks">
 
+                </ul>
+        </div>
     </div>
 
 </div>
