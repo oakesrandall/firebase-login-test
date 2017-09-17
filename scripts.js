@@ -39,6 +39,7 @@ function saveToFb(taskName, assignedTo, taskInfo, taskDue) {
         taskInfo: taskInfo,
         taskDue: taskDue
     })
+    console.log('saved new task to firebase');
     console.log(tasks);
 };
 
